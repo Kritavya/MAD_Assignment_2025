@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">ThemeSettings</string>
+    <string name="app_name">Theme Settings</string>
+    <string-array name="unit_types">
+        <item>Feet</item>
+        <item>Inches</item>
+        <item>Centimeters</item>
+        <item>Meters</item>
+        <item>Yards</item>
+    </string-array>
+    <string name="settings">Settings</string>
+    <string name="enable_dark_mode">Enable Dark Mode</string>
+    <string name="menu_settings">Settings</string>
 </resources>

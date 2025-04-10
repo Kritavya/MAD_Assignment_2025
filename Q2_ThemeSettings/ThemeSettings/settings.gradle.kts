@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ThemeSettings"
+rootProject.name = "UnitConverter"
 include(":app")
  

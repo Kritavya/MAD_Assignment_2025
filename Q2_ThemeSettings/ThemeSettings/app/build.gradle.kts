@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kritavya.themesettings"
+    namespace = "com.kritavya.unitconverter"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.kritavya.themesettings"
+        applicationId = "com.kritavya.unitconverter"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

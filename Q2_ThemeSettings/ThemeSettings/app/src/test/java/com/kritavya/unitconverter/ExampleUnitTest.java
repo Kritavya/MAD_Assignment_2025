@@ -1,4 +1,4 @@
-package com.kritavya.themesettings;
+package com.kritavya.unitconverter;
 
 import org.junit.Test;
 
