@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GoogleAuth</string>
+    <!-- Placeholder that will be replaced by Firebase plugin -->
+    <string name="default_web_client_id">579061019296-ofvq0ibhh00p39b01m2ajbva549r7t28.apps.googleusercontent.com</string>
 </resources>

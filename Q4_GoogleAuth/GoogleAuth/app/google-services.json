@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "579061019296",
+    "project_id": "mad-auth-52d1e",
+    "storage_bucket": "mad-auth-52d1e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579061019296:android:0ec15efb9e13c1ba864fc5",
+        "android_client_info": {
+          "package_name": "com.kritavya.googleauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI1eSp8lSaHonZL0A0SxpK4NVmLexWpck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
