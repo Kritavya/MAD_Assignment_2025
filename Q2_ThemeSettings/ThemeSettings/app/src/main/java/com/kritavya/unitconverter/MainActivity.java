@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,6 +66,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
+        // Set the appropriate icon based on the current theme
+        updateSettingsIcon();
+    }
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Update the settings icon when activity resumes
+        updateSettingsIcon();
+    }
+    
+    /**
+     * Updates the settings icon based on the current theme
+     */
+    private void updateSettingsIcon() {
+        int currentNightMode = AppCompatDelegate.getDefaultNightMode();
+        if (currentNightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            // Dark theme is active
+            imageViewSettings.setImageResource(R.drawable.settings_dark);
+        } else {
+            // Light theme is active
+            imageViewSettings.setImageResource(R.drawable.settings_light);
+        }
     }
 
     @Override
