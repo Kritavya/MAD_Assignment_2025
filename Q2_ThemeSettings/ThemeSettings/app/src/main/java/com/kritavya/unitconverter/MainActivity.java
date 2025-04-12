@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import android.app.Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonConvert;
     private TextView textViewResult;
     private ImageView imageViewSettings;
+    private static final int SETTINGS_REQUEST_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,27 @@ public class MainActivity extends AppCompatActivity {
         SettingsActivity.applyTheme(preferences);
         
         super.onCreate(savedInstanceState);
+        
+        // Ensure status bar is properly handled
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+        
         setContentView(R.layout.activity_main);
+        
+        // Set windowInsets listener
+        View mainLayout = findViewById(R.id.main);
+        ViewCompat.setOnApplyWindowInsetsListener(mainLayout, (v, insets) -> {
+            int statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top;
+            mainLayout.setPadding(
+                mainLayout.getPaddingLeft(),
+                statusBarHeight + 16, // Add padding to original padding
+                mainLayout.getPaddingRight(),
+                mainLayout.getPaddingBottom()
+            );
+            return insets;
+        });
 
         // Initialize views
         editTextValue = findViewById(R.id.editTextValue);
@@ -63,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, SETTINGS_REQUEST_CODE);
             }
         });
         
@@ -172,6 +197,15 @@ public class MainActivity extends AppCompatActivity {
                 return meters / 0.9144;
             default:
                 return 0;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SETTINGS_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            // Theme was changed, recreate this activity to apply theme
+            recreate();
         }
     }
 }
