@@ -21,7 +21,6 @@ MAD_Assignment_2025/
 ├── Q3_LottieAnimation/         # 🎞️ Lottie Animation Viewer
 ├── Q4_GoogleAuth/              # 🔐 Google Sign-In with Firebase
 ├── Q5_PhotoGallery/            # 📸 Camera + Gallery App
-├── Submission/                 # Final PDF, Docs
 └── ui_elements/                # 📸 All screenshots and demo video
 ```
 
@@ -58,10 +57,9 @@ MAD_Assignment_2025/
 - Uses LottieAnimationView
 - 📲 [Download APK](Q3_LottieAnimation/LottieAnimation.apk)
 
-🎥 **Demo Video:**
-[Click to watch](ui_elements/q3_ui_1.mp4)
-
----
+<p align="center">
+  <img src="ui_elements/q3_ui_1.png" width="30%">
+</p>
 
 ## ✅ Q4: Google Sign-In App
 - Login via Google using Firebase Authentication
