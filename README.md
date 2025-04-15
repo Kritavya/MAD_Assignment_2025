@@ -116,7 +116,7 @@ Q5_PhotoGallery/PhotoGallery.apk
 ## 🙋‍♂️ Author
 
 **Kritavya Patel**  
-📧 [kritavyapatel@gmail.com](mailto:kritavyapatel@gmail.com)  
+📧 [kritavyapatel999@gmail.com](mailto:kritavyapatel999@gmail.com)  
 💻 [GitHub: @Kritavya](https://github.com/Kritavya)  
 📸 [Instagram: @kritavya](https://instagram.com/kritavya)  
-🔗 [LinkedIn: Kritavya Patel](https://www.linkedin.com/in/kritavya)
+🔗 [LinkedIn: Kritavya Patel](https://www.linkedin.com/in/kritavyapatel)
